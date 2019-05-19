@@ -1,0 +1,157 @@
+@import '~antd/lib/style/themes/default.less';
+
+.head {
+  width: 100%;
+  transition: background 0.3s, width 0.2s;
+  height: 64px;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  position: relative;
+  :global {
+    .ant-menu-submenu.ant-menu-submenu-horizontal {
+      line-height: 64px;
+      height: 100%;
+      .ant-menu-submenu-title {
+        height: 100%;
+      }
+    }
+  }
+  &.light {
+    background-color: #fff;
+  }
+  .main {
+    display: flex;
+    height: 64px;
+    padding-left: 24px;
+    &.wide {
+      max-width: 1200px;
+      margin: auto;
+      padding-left: 0;
+    }
+    .left {
+      flex: 1;
+      display: flex;
+    }
+  }
+}
+
+.right {
+  float: right;
+  height: 100%;
+  overflow: hidden;
+  .action {
+    cursor: pointer;
+    padding: 0 12px;
+    display: inline-block;
+    transition: all 0.3s;
+    height: 100%;
+    > i {
+      vertical-align: middle;
+      color: @text-color;
+    }
+  }
+  .search {
+    padding: 0 12px;
+    &:hover {
+      background: transparent;
+    }
+  }
+  .account {
+    .avatar {
+      margin: 20px 8px 20px 0;
+      color: @primary-color;
+      background: rgba(255, 255, 255, 0.85);
+      vertical-align: top;
+    }
+  }
+}
+
+.logo {
+  width: 165px;
+  height: 64px;
+  position: relative;
+  line-height: 64px;
+  transition: all 0.3s;
+  overflow: hidden;
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 32px;
+  }
+  h1 {
+    color: #fff;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    margin: 0 0 0 12px;
+    font-weight: 400;
+  }
+}
+
+.light {
+  h1 {
+    color: #002140;
+  }
+}
+
+.dark {
+  height: 64px;
+  .action {
+    color: rgba(255, 255, 255, 0.85);
+    > i {
+      color: rgba(255, 255, 255, 0.85);
+    }
+    &:hover,
+    &:global(.ant-popover-open) {
+      background: @primary-color;
+    }
+    :global(.ant-badge) {
+      color: rgba(255, 255, 255, 0.85);
+    }
+  }
+  .trigger {
+    color: rgba(255, 255, 255, 0.85);
+  }
+}
+
+.menu {
+  :global(.anticon) {
+    margin-right: 8px;
+  }
+  :global(.ant-dropdown-menu-item) {
+    min-width: 160px;
+  }
+}
+
+.headerSearch {
+  :global(.anticon-search) {
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .input {
+    transition: width 0.3s, margin-left 0.3s;
+    width: 0;
+    background: transparent;
+    border-radius: 0;
+    :global(.ant-select-selection) {
+      background: transparent;
+    }
+    input {
+      border: 0;
+      padding-left: 0;
+      padding-right: 0;
+      box-shadow: none !important;
+    }
+    &,
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid @border-color-base;
+    }
+    &.show {
+      width: 210px;
+      margin-left: 8px;
+    }
+  }
+}
+
+
+

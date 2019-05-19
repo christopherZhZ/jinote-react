@@ -1,0 +1,29 @@
+html, body, #root, #app, #app>div {
+  height: 100%;
+  width: 100%;
+  /*overflow-x: hidden !important;*/
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+.ant-layout.main {
+  height: calc(100% - 64px);
+}
+.ant-btn-group {
+  margin-right: 8px;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
